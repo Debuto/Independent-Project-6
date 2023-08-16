@@ -9,6 +9,16 @@
   <form id="conversion-form">
     <label for="usd-amount">Enter USD amount: </label>
     <input type="number" id="usd-amount" step="0.01" required>
+
+    <label for="target-currency">Choose Target Currency:</label>
+    <select id="target-currency" required>
+      <option value="EUR">EUR - Euro</option>
+      <option value="JPY">JPY - Japanese Yen</option>
+      <option value="INR">INR - Indiand Rupee</option>
+      <option value="HKD">HKD - Hong Kong Dollar</option>
+      <option value="MWK">MWK - Malawian Kwacha</option>
+      <option value="SDG">SDG - Sudanese Pound</option>
+    </select>
     <button type="submit">Convert</button>
   </form>
   <div id="conversion-result"></div>
