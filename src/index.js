@@ -1,6 +1,6 @@
 // uiLogic.js
 
-import { performConversion } from './businessLogic';
+import { performConversion } from './../src/js/scripts.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('conversion-form').addEventListener('submit', async function (event) {
