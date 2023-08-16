@@ -1,46 +1,33 @@
-document.getElementById('conversion-form').addEventListener('submit', async function(event) {
-  event.preventDefault();
+// businessLogic.js
 
-  const usdAmount = parseFloat(document.getElementById('usd-amount').value);
-  const targetCurrency = document.getElementById('target-currency').value;
-
-  if (isNaN(usdAmount)) {
-    document.getElementById('conversion-result').textContent = 'Please enter a valid USD amount.';
-    return;
-  }
-
+// Function to perform the currency conversion
+async function performConversion(usdAmount, targetCurrency) {
   const apiUrl = `https://v6.exchangerate-api.com/v6/93892423c8a0950320cc7780/latest/USD`;
-  
+
   try {
     const response = await fetch(apiUrl);
     if (!response.ok) {
       const errorData = await response.json();
       const errorMessage = errorData.error_message || 'An error occurred during API call.';
-      document.getElementById('error-notification').textContent = `Error: ${errorMessage}`;
-      return;
+      return { error: errorMessage };
     }
-    
-    const data = await response.json();
 
+    const data = await response.json();
     const conversionRates = data.conversion_rates;
 
     if (!conversionRates[targetCurrency]) {
-      document.getElementById('error-notification').textContent = `Error: Currency '${targetCurrency}' not found in conversion rates.`;
-      document.getElementById('conversion-result').textContent = ''; 
-      return;
+      return { error: `Currency '${targetCurrency}' not found in conversion rates.` };
     }
 
     const conversionResult = {};
-
     for (const currency in conversionRates) {
       conversionResult[currency] = (usdAmount * conversionRates[currency]).toFixed(2);
     }
 
-    const resultHTML = `<p>${targetCurrency}: ${conversionResult[targetCurrency]}</p>`;
-
-    document.getElementById('conversion-result').innerHTML = resultHTML;
-    document.getElementById('error-notification').textContent = '';
+    return { result: conversionResult };
   } catch (error) {
-    document.getElementById('error-notification').textContent = 'An error occurred while fetching data.';
+    return { error: 'An error occurred while fetching data.' };
   }
-});
+}
+
+export { performConversion };
