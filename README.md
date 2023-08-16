@@ -49,14 +49,9 @@ To run tests: `$ npm test`
 
 # Known bugs:
 
-Issue on form branch, able to build and start envvironment. When attempting to test environment with puppeteer module, getting eeror message, "Cannot find module 'puppeteer.js' from 'scripts.test.js'".
+Issue with npm run start. On html in browser (Chrome) domain goes from http://localhost:8080/ to http://localhost:8080/?
 
-Troubleshooting -->
-
-npm install --save-dev puppeteer
-npm ls puppeteer
-Checked imporrt statement (Correct)
-Checked json (Correct)
+Unable to output proper reflection of data via div results... Page refreshes even though in logic event.preventDefault is present... 
 
 #### Copyright (c) 2023 Deante Cacatian
 
