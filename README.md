@@ -6,9 +6,17 @@
 
 * In order to run install and run project you'll need to have Node installed on your computer.
 1. Clone Project, in  Bash terminal: `$ git clone https://github.com/Debuto/Independent-Project-6.git`
-2. Navigate to project directory: `$ cd portfolio4-project`
+2. Navigate to project directory: `$ cd portfolio6-project`
 3. Install dependencies: `$ npm install`
 4. Build project and run server: `$ npm run start`
+
+* Further explained: API setup
+1. Go to this site: https://www.exchangerate-api.com/
+2. Create an account and log in
+3. Get an API key
+4. Update key in BL in the JS to yours! (BE SURE TO READ GUIDLINES OF USAGE AND ADD THE KEY TO YOUR .ENV FILE!!!)
+5. Refer to API keys official documentation for specifics.
+
 <br>
 
 ## Description:

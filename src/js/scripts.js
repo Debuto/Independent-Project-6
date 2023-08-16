@@ -2,7 +2,8 @@
 
 // Function to perform the currency conversion
 async function performConversion(usdAmount, targetCurrency) {
-  const apiUrl = `https://v6.exchangerate-api.com/v6/93892423c8a0950320cc7780/latest/USD`;
+  const apiKey = '93892423c8a0950320cc7780';
+  const apiUrl = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/USD`;
 
   try {
     const response = await fetch(apiUrl);
