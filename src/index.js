@@ -1,6 +1,7 @@
 // uiLogic.js
 
-import { performConversion } from './../src/js/scripts.js';
+import performConversion from '../src/js/scripts.js';
+import './css/styles.css';
 
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('conversion-form').addEventListener('submit', async function (event) {

@@ -2,15 +2,16 @@
 <html>
 <head>
   <title>Currency Conversion</title>
+  <link href="./css/styles.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-  <h1>USD to Other Currencies Conversion</h1>
+  <h1>USD ain't worth nothing...</h1>
   <form id="conversion-form">
     <label for="usd-amount">Enter USD amount: </label>
-    <input type="number" id="usd-amount" step="0.01" required>
+    <input type="number" id="usd-amount" step="0.01" required><br><br>
 
-    <label for="target-currency">Choose Target Currency:</label>
+    <label for="target-currency">Choose Target Currency:</label>  
     <select id="target-currency" required>
       <option value="EUR">EUR - Euro</option>
       <option value="JPY">JPY - Japanese Yen</option>
@@ -18,7 +19,7 @@
       <option value="HKD">HKD - Hong Kong Dollar</option>
       <option value="MWK">MWK - Malawian Kwacha</option>
       <option value="SDG">SDG - Sudanese Pound</option>
-    </select>
+    </select><br><br>
     <button type="submit">Convert</button>
   </form>
   
