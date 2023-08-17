@@ -49,9 +49,7 @@ To run tests: `$ npm test`
 
 # Known bugs:
 
-Issue with npm run start. On html in browser (Chrome) domain goes from http://localhost:8080/ to http://localhost:8080/?
-
-Unable to output proper reflection of data via div results... Page refreshes even though in logic event.preventDefault is present... 
+Works as intended!
 
 #### Copyright (c) 2023 Deante Cacatian
 
