@@ -14,7 +14,7 @@
 1. Go to this site: https://www.exchangerate-api.com/
 2. Create an account and log in
 3. Get an API key
-4. Update key in BL in the JS to yours! (BE SURE TO READ GUIDLINES OF USAGE AND ADD THE KEY TO YOUR .ENV FILE!!!)
+4. Update key in the .env (you'll need to make this in the root directory)! (BE SURE TO READ GUIDLINES OF USAGE AND ADD THE KEY TO YOUR .ENV FILE!!!) If you need better instructions follow tthis link: https://www.learnhowtoprogram.com/fidgetech-2-intermediate-javascript-with-jquery/2-3-asynchrony-and-apis/2-3-0-8-managing-api-keysv
 5. Refer to API keys official documentation for specifics.
 
 <br>
